@@ -75,11 +75,11 @@ app.get(`/restaurant/:id`, (req, res) => {
   nearbyInfo.end();
 });
 
-app.get(`/restaurants/:restaurantID/reviews`, (req, res) => {
+app.get(`/:restaurantID/allreviews/reviews/`, (req, res) => {
   var reviewInfo = {
     host: 'localhost',
     port: 3002,
-    path: `/restaurants/${req.params.restaurantID}/reviews`,
+    path: `/${req.params.restaurantID}/allreviews/reviews/`,
     method: 'GET',
     headers: {
       accept: 'application/json'
