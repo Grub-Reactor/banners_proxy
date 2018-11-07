@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <title>FEC Demo</title>
+  </head>
+  <body>
+    <div id="main"></div>
+    <div id="app"></div>
+    <div id="carousel"></div>
+    <div id="reviews"></div>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./menuBundle.js"></script>
+    <script src="./bannerBundle.js"></script>
+    <script src="./nearbyBundle.js"></script>
+    <script src="./reviewBundle.js"></script>
+    
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+
+    <script>
+      ReactDOM.render(
+        React.createElement(Banner),
+        document.getElementById('main')
+      );
+      ReactDOM.render(
+        React.createElement(Menu),
+        document.getElementById('app')
+      );
+      ReactDOM.render(
+        React.createElement(Carousel),
+        document.getElementById('carousel')
+      );
+      ReactDOM.render(
+        React.createElement(ReviewList),
+        document.getElementById('reviews')
+      );
+    </script>
+  </body>
+</html>
